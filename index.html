@@ -18,7 +18,7 @@
     <!--- Titulo -->
     <title>Jonathan C. | Desarrollo web Front-end</title>
     <!-- Favicon titulo -->
-    <link rel="icon" type="image/x-icon" href="./imagenes/Logo1.png">
+    <link rel="icon" type="icono-titulo" href="./imagenes/Logo1.png">
 
     <!--Letras Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
 </head>
 <body>
   <!-- inicio navegador y haburguer -->
-  <header class="menu">
+  <header id="Inicio" class="menu">
     <img src="./imagenes/Logo.png" class="logo" alt="logo">
     <div class="logoHamb">
       <span class="bar"></span>
@@ -37,10 +37,10 @@
       
       <nav class="ctn-list list-Ham">
         <ul class="lists">
-          <li> <a href="#sobre-mi">Inicio</a> </li>
-            <li><a href="#proyectos">Sobre mi</a></li>
-            <li><a href="#testimonios">Habilidades</a></li>
-            <li><a href="#cotactato">Contacto</a></li>
+          <li> <a href="#Inicio">Inicio</a> </li>
+            <li><a href="#sobre-mi">Sobre mi</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -48,10 +48,10 @@
 
       <nav class="ctn-list">
         <ul class="lists">
-          <li> <a href="#sobre-mi">Inicio</a> </li>
-            <li><a href="#proyectos">Sobre mi</a></li>
-            <li><a href="#testimonios">Habilidades</a></li>
-            <li><a href="#cotactato" class="active">Contacto</a></li>
+          <li> <a href="#Inicio">Inicio</a> </li>
+            <li><a href="#sobre-mi">Sobre mi</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto" class="active">Contacto</a></li>
         </ul>
       </nav>
     
@@ -66,7 +66,7 @@
     <div class="hero-inferior">
       <!--- img-fluid = Se adapta a la pantalla DTam-->
       <h1>Hola, Soy Jonathan Cordoba..   <span> &#160; </span> </h1>
-      <p>Soy un joven con una gran pasión por aprender y crecer. Me encanta luchar por mis sueños y cumplir mis metas. Me esfuerzo por desempeñarme con excelencia en todo lo que hago, siempre buscando alcanzar mis objetivos. </p>
+      <p class="parrafos">Soy un joven con una gran pasión por aprender y crecer. Me encanta luchar por mis sueños y cumplir mis metas. Me esfuerzo por desempeñarme con excelencia en todo lo que hago, siempre buscando alcanzar mis objetivos. </p>
       <p class="txt-inferior">Disponible para trabajar <i class="bi bi-emoji-wink-fill"></i> </p> 
 
       <div class="btn-info">
@@ -92,18 +92,22 @@
   <!--Fin Seccion hero-->
 
   <!-- Inicio sobre mi -->
-  <section class="sobre-mi">
+  <section id="sobre-mi" class="sobre-mi">
       <img src="./imagenes/Compu.svg" alt="imagen de persona ">
       <div class="ctn-text">
         <h1 class="titulos">Sobre mi</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+        <p class="parrafos">¡Hola! Soy Jonathan Córdoba. Mi aventura en el desarrollo comenzó cuando realicé un técnico, y desde entonces, descubrí mi pasión por la programación, un mundo que no he dejado de explorar. Me considero una persona responsable, disciplinada y determinada a alcanzar mis metas y sueños.</p>
+
+        <p class="parrafos"> Antes de adentrarme en el desarrollo, trabajé en diversas áreas, lo cual me permitió cumplir algunas metas importantes, como sacar adelante a mi familia, comprar mi moto y adquirir mi propio apartamento. Estos logros me han motivado aún más en mi trayectoria.</p>
+
+      <p class="parrafos"> Cuando no estoy programando, disfruto mucho haciendo ejercicio, especialmente trotar, y valoro el tiempo que paso con mis seres queridos.</p>
        </div>
   </section>
 
   <!-- fin sobre mi -->
 
-  
- <article class="ctn-habilidades"> 
+  <!-- Inicio de habilidades -->
+ <article id="habilidades" class="ctn-habilidades"> 
   <h1 class="titulos">Habilidades</h1>
   <section class="ctn-hab"> 
 
@@ -168,13 +172,149 @@
   </section>
  </article>
  
-<!--Fin Contacto -->
+<!--Fin habilidades -->
+
+<!-- Inicio interesado en aprender -->
+
+<section class="Ctn-Interes">
+  <h1 class="titulos">Interesado en aprender</h1>
+  <div class="parrafo">
+    <p class="parrafos">Estos son algunos lenguajes que me gustaría aprender para mejorar cada día y convertirme en un profesional.</p> 
+  </div>
+</section>
+
+<section class="ctn-slider">
+  <div class="slider">
+    <div class="slide-track">
+  
+      <div class="slide">
+          <img src="./imagenes/bootstrap.svg" alt="Logo de bootstrap">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/tailwind.svg" alt="Logo de tailwind">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/sass.svg" alt="Logo de sass">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/typescript.svg" alt="Logo de typescript">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/angular.svg" alt="Logo de angular">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/react.svg" alt="Logo de react">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/nodejs.svg" alt="Logo de nodejs">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/vuejs.svg" alt="Logo de vuejs">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/php.svg" alt="Logo de PHP">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/sql.svg" alt="Logo de Sql">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/python.svg" alt="Logo de python">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/java.svg" alt="Logo de java">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/wordpress.svg" alt="Logo de wordpress">
+      </div>
+  
+  
+      <div class="slide">
+        <img src="./imagenes/tailwind.svg" alt="Logo de tailwind">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/sass.svg" alt="Logo de sass">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/typescript.svg" alt="Logo de typescript">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/angular.svg" alt="Logo de angular">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/react.svg" alt="Logo de react">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/nodejs.svg" alt="Logo de nodejs">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/vuejs.svg" alt="Logo de vuejs">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/php.svg" alt="Logo de PHP">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/sql.svg" alt="Logo de Sql">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/python.svg" alt="Logo de python">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/java.svg" alt="Logo de java">
+      </div>
+      <div class="slide">
+        <img src="./imagenes/wordpress.svg" alt="Logo de wordpress">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="ctn-contacto">
+  <h1 class="titulos">Contacto</h1>
+  <form class="contacto" action="https://formsubmit.co/alejandroleiton695@gmail.com" method="POST">
+    <h3>Hablemos </h3>
+    <label for="Nombre">Nombre: </label>
+    <input type="text" name="nombre" required>
+
+    <label for="Correo">Correo electrónico: </label>
+    <input type="email" name="email" required>
+
+    <label for="Correo">Asunto: </label>
+    <input type="text" name="subject" required>
+    
+    
+    <label for="Asunto">Mensaje: </label>
+    <textarea name="mensaje" cols="15" rows="20" required></textarea>
+    <button class="btn-enviar" type="submit" value="Enviar">Enviar </button>
+    <input type="hidden" name="_next" value="http://127.0.0.1:3000/">
+    <input type="hidden" name="_captcha" value="false">
+  </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- fin interesado en aprender -->
+
+
+
 
 <!--Footer (pie de pagina )-->
-<section class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-  <img src="./imagenes/Logo.png" class="footer-icono" alt="logo de Portafolio">
+<footer class="Footer">
   <p class="footer-texto">
-    Aprendo y creo todos los días <br> Creemos un proyecto juntos 
+    Gracias por visitar mi Portafolio
   </p>
 <div class="iconos-redes-sociales d-flex flex-wrap align-items-stretch justify-content-center">
   <a href="#" target="_blank" >
@@ -193,8 +333,8 @@
     <i class="bi bi-envelope"></i>
   </a>
 </div>
-<div class="derechos-autor">Creado por Jonathan cordoba (2023) &#169;</div>
-</section>
+<div class="derechos-autor">Creado por Jonathan cordoba (2024) &#169;</div>
+</footer>
 <!--Fin Footer-->
 
 <script src="./js/main.js"></script>
