@@ -57,17 +57,18 @@
     
     
   </header>
+  <section class="spikes"></section>
 <!-- Fin navegador hamburguer -->
 
   <!--Inicio Seccion principal (Hero)-->
   <section class="ctn-info">
-  <div class="hero-content">
+  <div class="info-content">
 
-    <div class="hero-inferior">
+    <div class="info-inferior">
       <!--- img-fluid = Se adapta a la pantalla DTam-->
       <h1>Hola, Soy Jonathan Cordoba..   <span> &#160; </span> </h1>
       <p class="parrafos">Soy un joven con una gran pasión por aprender y crecer. Me encanta luchar por mis sueños y cumplir mis metas. Me esfuerzo por desempeñarme con excelencia en todo lo que hago, siempre buscando alcanzar mis objetivos. </p>
-      <p class="txt-inferior">Disponible para trabajar <i class="bi bi-emoji-wink-fill"></i> </p> 
+      <p class="txt-inferior">Disponible para trabajar <i class=" carita bi bi-emoji-wink-fill"></i> </p> 
 
       <div class="btn-info">
         <a download="CurriculumVJonathan" href="CurriculumVJonathan.pdf" target="_blank" >
@@ -81,14 +82,15 @@
     
       </div>
 
-    <div class="hero-foto">
+    <div class="info-foto">
       <!-- imagen perfil -->
-      <img src="./imagenes/imagen.jpeg" class="hero-imagen-perfil" alt="Foto Jonathan Cordoba">
+      <img src="./imagenes/imagen.jpeg" class="info-imagen-perfil" alt="Foto Jonathan Cordoba">
     </div>
     
   
   </div>
   </section> 
+  <section class="spikes2"></section>
   <!--Fin Seccion hero-->
 
   <!-- Inicio sobre mi -->
@@ -104,9 +106,11 @@
        </div>
   </section>
 
-  <!-- fin sobre mi -->
+  <section class="spikes"></section>
+    <!-- fin sobre mi -->
 
   <!-- Inicio de habilidades -->
+  <section class="ctn-img">
  <article id="habilidades" class="ctn-habilidades"> 
   <h1 class="titulos">Habilidades</h1>
   <section class="ctn-hab"> 
@@ -267,6 +271,9 @@
     </div>
   </div>
 </section>
+<section class="spikes3"></section>
+  </section>
+ 
 
 <section id="contacto" class="ctn-contacto">
   <h1 class="titulos">Contacto</h1>
@@ -284,32 +291,16 @@
     
     <label for="Asunto">Mensaje: </label>
     <textarea name="mensaje" cols="15" rows="20" required></textarea>
-    <button class="btn-enviar" type="submit" value="Enviar">Enviar </button>
+    <button class="btn-enviar"id="buttonModal" type="submit" value="Enviar">Enviar </button>
+    <!-- Valores para que no se muestre el captch y no lo lleve a otra pagina -->
+    <input type="hidden" name="_next" value="http://127.0.0.1:3000/">
+    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="http://127.0.0.1:3000/">
     <input type="hidden" name="_captcha" value="false">
   </form>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- fin interesado en aprender -->
-
-
-
 
 <!--Footer (pie de pagina )-->
 <footer class="Footer">
@@ -317,17 +308,15 @@
     Gracias por visitar mi Portafolio
   </p>
 <div class="iconos-redes-sociales d-flex flex-wrap align-items-stretch justify-content-center">
-  <a href="#" target="_blank" >
-    <i class="bi bi-twitter"></i>
-  </a>
-  <a href="#" target="_blank" >
+
+  <a href="https://github.com/Jonathan6432" target="_blank" >
     <i class="bi bi-github"></i>
   </a>
-  <a href="#" target="_blank" >
+  <a href="https://www.linkedin.com/in/jonathan-cordobal/" target="_blank" >
     <i class="bi bi-linkedin"></i>
   </a>
-  <a href="#" target="_blank" >
-    <i class="bi bi-instagram"></i>
+  <a href="https://wa.me/573202551528" target="_blank" >
+    <i class="bi bi-whatsapp"></i>
   </a>
   <a href="mailto:jonathan.jc633@gmail.com" target="_blank" >
     <i class="bi bi-envelope"></i>

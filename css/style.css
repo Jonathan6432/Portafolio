@@ -12,7 +12,7 @@
   --main-color: #00ffee;
   --bg: #3c3e42;
   --font-family: "Rubik Dirt", cursive;
-  /* --columns:repeat(3,5fr); */
+  --columns:repeat(3,5fr);
   --rows: 2fr;
 }
 
@@ -123,29 +123,33 @@
 .ctn-info {
   /* background: linear-gradient(90deg, #0d0c0a,#30302f,#626161); */
   background-color: var(--bg);
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:linear-gradient(
-    50deg,
-    rgb(36, 33, 33) 70%,
-    rgba(70, 153, 150, 0.7)),
-    url(/imagenes/Fondo2.jpg);
+
 }
-.hero-content {
+
+.carita {
+  color: var(--main-color);
+
+  padding:10px;
+
+}
+
+.info-content {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
   gap: 5rem;
 }
-.hero-inferior h1 span {
+.info-inferior h1 span {
   position: absolute;
   animation: Maquina 5s infinite alternate steps(35); /* Se crea el efecto de maquina de escribir con 35 caracteres */
   right: 0;
   width: 0%;
-  background-color: rgb(36, 33, 33);
+  background-color: var(--bg);
   border-left: 2px solid var(--main-color);
 }
 @keyframes Maquina {
@@ -157,15 +161,15 @@
   }
 }
 
-.hero-inferior h1 {
+.info-inferior h1 {
   color: #000000;
   font-size: 2.5em;
   font-family: "Rubik Dirt", cursive;
   position: relative;
-  background-color: rgb(36, 33, 33);
+  background-color: var(--bg);
 }
 
-.hero-inferior {
+.info-inferior {
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -174,13 +178,13 @@
   gap: 1rem;
 }
 
-.hero-inferior p {
+.info-inferior p {
   font-size: 1.1rem;
   color: var(--text-color);
   text-align: justify;
 }
 
-.hero-inferior .txt-inferior {
+.info-inferior .txt-inferior {
   font-size: 1rem;
   color: #000000;
   margin-top: 5px;
@@ -219,7 +223,7 @@
   }
 }
 
-.hero-imagen-perfil {
+.info-imagen-perfil {
   margin: 5px;
   top: 2rem;
   width: 25vw;
@@ -229,13 +233,13 @@
   transition: 0.4s ease-in-out;
 }
 
-.hero-imagen-perfil:hover {
+.info-imagen-perfil:hover {
   box-shadow: 0 0 25px var(--main-color);
   box-shadow: 0 0 50px var(--main-color);
   box-shadow: 0 0 100px var(--main-color);
 }
 
-/*----------------------- Estilos generales---------------------------------------- */
+/*-------------- Estilos generales----------------------------- */
 
 .titulos {
   color: var(--main-color);
@@ -249,7 +253,70 @@
   color: var(--text-color);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  font-size: 15px;
 }
+
+.spikes {
+  position: relative;
+  background: var(--bg-color);
+  height: 2vh;
+}
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -11%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 45px;
+  background-size: 45px 100%;
+  background-image: linear-gradient(135deg,#252323 25%, transparent 25%), linear-gradient(225deg, #252323 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.spikes2 {
+  position: relative;
+  background: var(--bg);
+  height: 2vh;
+}
+
+.spikes2::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -11%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 45px;
+  background-size: 45px 100%;
+  background-image: linear-gradient(135deg,#3c3e42 25%, transparent 25%), linear-gradient(225deg, #3c3e42 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.spikes3 {
+  position: relative;
+  background: #242121;
+  height: 2vh;
+}
+
+.spikes3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -11%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 45px;
+  background-size: 45px 100%;
+  background-image: linear-gradient(135deg,#242121 25%, transparent 25%), linear-gradient(225deg, #242121 25%, transparent 25%);
+  background-position: 0 0;
+
+}
+
 
 /*----------------------------------------------------------------------------- */
 
@@ -258,7 +325,7 @@
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  height: 80vh;
+  min-height: 100vh;
 }
 
 .ctn-text {
@@ -283,10 +350,23 @@ img {
 /* fin sobre mi */
 
 /* Inicio de habilidades */
+/* ------------------------------------------------------- */
+.ctn-img{
+  
+  background:linear-gradient(
+    50deg,
+    #242121 60%,
+    rgba(70, 153, 150, 0.7)),
+    url(/imagenes/Fondo2.jpg);
+    min-height: 100vh;
+    z-index: 10;
+}
+
+/* --------------------------------------------- */
 
 .ctn-habilidades {
-  background-color: var(--bg);
-  height: 80vh;
+  /* background-color: var(--bg); */
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -307,8 +387,7 @@ img {
   box-shadow: 0 0 10px var(--main-color);
   border: 2px solid var(--main-color);
   border-radius: 10px;
-  background-color: var(--bg-color);
-  cursor: pointer;
+  /* background-color: var(--bg-color); */
 }
 
 .img-hab {
@@ -420,8 +499,8 @@ img {
 
 /* Inicio interes en aprender */
 .Ctn-Interes {
-  background-color: var(--bg);
-  min-height: 40vh;
+  /* background-color: var(--bg); */
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,7 +535,7 @@ img {
 }
 .ctn-slider{
   width: 100%;
-  background-color:var(--bg);
+  /* background-color:var(--bg); */
   height: 30vh;
 }
 .slider {
@@ -467,7 +546,7 @@ img {
   position: relative;
   display: grid;
   place-items: center;
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
 }
 .slider .slide-track {
   display: flex;
@@ -480,6 +559,9 @@ img {
 }
 .slider .slide img {
   width: 100%;
+}
+.slide-track:hover{
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -496,7 +578,7 @@ img {
 
 /* inicio contacto */
 .ctn-contacto{
-  background-color: var(--bg-color);
+  background-color: var(--bg);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -505,7 +587,6 @@ img {
   text-align: center;
   color: #02030a;
   padding-bottom: 20px;
-  
 
 }
 
@@ -516,7 +597,7 @@ img {
 
   border-radius:20px;
   text-align: left;
-  box-shadow: 0 0 20px #000000;
+  box-shadow: 0 0 20px var(--main-color);
   font-family: var(--font-family);
   min-height: 50%;
   padding: 20px;
@@ -540,6 +621,7 @@ img {
   border: none;
 
 }
+
 
 .contacto label{
   font-size: 17px;
@@ -584,7 +666,10 @@ img {
 /* Pie de pagina ( footer )*/
 
 .Footer{
-  background-color:var(--bg-color);
+  
+  background:var(--bg);
+
+
 }
 .footer-texto{
   color: var(--text-color);
@@ -624,12 +709,15 @@ img {
 }
 
 .iconos-redes-sociales a:hover {
-  background-color: rgb(17, 16, 16);
+  background-color: rgb(13, 253, 241);
   border: 2px solid rgb(13, 253, 241);
+  box-shadow: 0 0 25px var(--main-color);
+  box-shadow: 0 0 50px var(--main-color);
 }
 
 .iconos-redes-sociales a:hover i {
-  color: rgb(237, 237, 237);
+  color: rgb(10, 9, 9);
+  
 }
 
 .derechos-autor {
@@ -645,6 +733,57 @@ img {
   display: none;
 }
 
+/* estilos contenedor principal */
+.modal-container  {
+  display: none;
+  /* para que desaparesca de la pantalla */
+  position: fixed;
+  z-index: 1;
+  /* para que sobresalga de los elementos en pantalla  */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-container .modal-content{
+  background-color:#769beb;
+  margin: auto;
+  /* para centrar */
+  padding: 20px;
+  border: 3px solid #6927a7;
+  width: 60%;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.modal-container .close{
+  color: rgb(9, 6, 204);
+  float: right;
+  /* ubicar el close a la derecha */
+  font-size: 26px;
+  font-weight: bold;
+  background-color: rgb(186, 215, 215);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.modal-container .close:hover{
+  cursor: pointer;
+  background-color: rgb(217, 5, 5);
+  color: black;
+  
+  /* Estilo para agregar un cursor en la clase close */
+
+} 
+
+.modal-container .modal-content:hover{
+  background-color: rgb(83, 59, 59);
+  color: #f0eef1;
+  border: 4px solid #f17474;
+
+}
 
 /* Adaptable responsivo */
 
@@ -704,33 +843,33 @@ img {
     visibility: visible;
   }
 
-  .hero-inferior {
+  .info-inferior {
     margin: 0px 15px 0 15px;
   }
 
-  .hero-inferior h1 {
+  .info-inferior h1 {
     font-size: 1.3em;
     font-family: "Rubik Dirt", cursive;
     position: relative;
   }
-  .hero-inferior p {
+  .info-inferior p {
     font-size: 0.9em;
     color: var(--text-color);
   }
   .ctn-info {
-    height: 100vh;
+    height: auto;
   }
 
-  .hero-imagen-perfil {
-    width: 40vw;
+  .info-imagen-perfil {
+    min-width: 40vw;
   }
 
-  .hero-content {
+  .info-content {
     display: flex;
     flex-wrap: wrap-reverse;
   }
 
-  .hero-inferior {
+  .info-inferior {
     width: 100%;
     align-items: center;
   }
@@ -745,11 +884,7 @@ img {
     height: auto;
   
   }
-/* ---------------------------------------------------------- */
-.parrafos{
-  font-size: 15px;
-}
-/* -------------------------------------------------------------- */
+
   .ctn-text {
     color: var(--main-color);
     width: 80%;
@@ -811,5 +946,9 @@ img {
   .contacto input{
     padding: 5px;
     font-size: 12px;
+  }
+
+  .footer-texto{
+    font-size: 1em;
   }
 }
